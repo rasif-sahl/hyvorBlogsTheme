@@ -1,0 +1,11 @@
+theme_name: NewTheme
+theme_version: 1.0
+
+colors:
+  accent: "#896c6b"
+  light:
+    background_body: "#fffaf8"
+    background_box: "#ffffff"
+    background_contrast: "#E1E3E6"
+    text_content: "#000000"
+    text_content_secondary: "#777"
