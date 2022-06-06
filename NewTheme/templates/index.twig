@@ -1,4 +1,19 @@
-<!DOCTYPE html>
+{% extends '@base.twig' %}
+
+
+{% block body %}
+
+ <div class='test'>hello world</div>
+    <main role="main">
+        <section class="page-data">
+            <div class="page-title">{{ _blog.name }}</div>
+            <div class="page-description">{{ _blog.description }}</div>
+        </section>
+    </main>
+
+{% endblock %}
+
+{# <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>New Hyvor Blogs Theme<title>
@@ -12,20 +27,10 @@
         <div class="header-wrapper">
             {% include('_header.twig') %}
         </div>
-        {# <ul id="navigation">
-            {% for item in navigation %}
-                <li>
-                    <a href="{{ item.href }}">{{ item.caption }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-
-        <h1>My Webpage</h1>
-        {{ a_variable }} #}
 
         {% include('_footer.twig') %}
 
         {{ _foot | raw }}
 
     </body>
-</html>
+</html> #}
