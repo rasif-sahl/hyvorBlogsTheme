@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html lang="{{ _lang.code }}">
-<head>
+    <head>
+        {{ _head | template }}
+    </head>
 
-    {{ _head | template }}
+    <body>
 
-</head>
+        {# 
+            main theme - https://gatsbystarterblogsource.gatsbyjs.io/
+            development docs - http://blogs.hyvor.test/docs/themes-styles 
+            domain - http://dev.hyvorblogs.test/
+        #}
+        <div style="outline:none" tabindex="-1">
+            <div class="global-wrapper" data-is-root-path="true">
 
-<body>
-
-    {# 
-        main theme - https://gatsbystarterblogsource.gatsbyjs.io/
-        development docs - http://blogs.hyvor.test/docs/themes-styles 
-        domain - http://dev.hyvorblogs.test/
-    #}
-    <div style="outline:none" tabindex="-1">
-        <div class="global-wrapper" data-is-root-path="true">
-
-            <div class="header-wrapper">
-                {% include('_header.twig') %}
-            </div>
+                <div class="header-wrapper">
+                    {% include('_header.twig') %}
+                </div>
     
             <div></div>
             {% block body %}{% endblock %}
 
-            <div class="footer-wrapper">
-                {% include '_footer.twig' %}
-            </div>
-            {{ _foot | template }}
+                <div class="footer-wrapper">
+                    {% include '_footer.twig' %}
+                </div>
+                {{ _foot | template }}
 
+            </div>
         </div>
-    </div>
-</body>
+    </body>
 
 </html>
