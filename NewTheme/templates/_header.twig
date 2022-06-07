@@ -1,25 +1,38 @@
-{# <header>
-    <h3>
-        <a href="/">Hyvor Blogs</a>
-    </h3>
-    <nav>
-        <a href="About">About</a>
-        <a href="Privacy">Privacy</a>
-        <a href="Contact">Contact</a>
-    </nav>
-</header> #}
+<header class="global-header">
+    <h1 class="main-heading">
+        <a aria-current="page" class="" href="{{ _blog.url }}">
+            {{ _blog.name }}
+        </a>
+    </h1>
 
- {# <ul id="navigation">
-            {% for item in navigation %}
-                <li>
-                    <a href="{{ item.href }}">{{ item.caption }}</a>
-                </li>
+    {# <nav class="main-heading">
+
+        <a class="brand" href="{{ _blog.url }}">
+            <span class="name">{{ _blog.name }}</span>
+        </a> #}
+
+        {# <a class="brand" href="{{ _blog.url }}">
+            {% if _blog.logo_url %}
+                <img src="{{ _blog.logo_url }}" alt="{{ 'logo' | lang }}" />
+            {% endif %}
+            <span class="name">{{ _blog.name }}</span>
+        </a>
+
+
+        <div class="nav-links">
+            {% for nav in _blog.nav_header %}
+                <a class="nav-{{ nav.name | lower | slug }}{% if is_current_url(nav.url) %} active{% endif %}" href="{{ nav.url }}">
+                    <span>{{ nav.name }}</span>
+                </a>
             {% endfor %}
-        </ul>
+        </div>
 
-        <h1>My Webpage</h1>
-        {{ a_variable }} #}
+        {% if (_blog.color_modes == 'both') %}
+            <div class="color-mode-toggler">
+                <a onclick="_hb.changeColorMode('light')">{{ icon('fontawesome', 'sun-solid', 18) }}</a>
+                <a onclick="_hb.changeColorMode('dark')">{{ icon('fontawesome', 'moon-solid', 18) }}</a>
+            </div>
+        {% endif %} #}
 
-<div class="header">
-        <h1>Hyvor New Blog</h1>
-</div>
+    {# </nav> #}
+</header>
