@@ -3,11 +3,10 @@ theme_version: 1.0
 
 lang: en
 
-colors:
-  accent: "#896c6b"
-  light:
-    background_body: "#fffaf8"
-    background_box: "#ffffff"
-    background_contrast: "#E1E3E6"
-    text_content: "#000000"
-    text_content_secondary: "#777"
+# colors:
+#   primary: "#005b99"
+#   text: "#2e353f"
+#   text-light: "#4f5969"
+#   heading: "#1a202c"
+#   heading-black: "#black"
+#   accent: "#d1dce5"
