@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>{{ _post.title }}</title>
+
+{{ _head | template }}
+</head>
+<body>
+
+    <div style="outline:none" tabindex="-1">
+        <div class="global-wrapper" data-is-root-path="true">
+
+            {# <div class="header-wrapper">
+                {% include('_header.twig') %}
+            </div> #}
+            <header class="global-header">
+                <a class="header-link-home" href="/">
+                   {{ _blog.name }}
+                </a>
+            </header>
+
+             <main>
+                <article class="blog-post" itemscope="" itemtype="http://schema.org/Article">
+                    <header>
+                        <h1 itemprop="headline">{{ _post.title }}</h1>
+                        <p>{{ post.published_at | date('F j, Y') }}</p>
+                    </header>
+                    <section itemprop="articleBody">
+                        {{ _post.content | raw }}
+                    </section>
+                    <hr>
+                    <div class="bio">
+                        <p>Written by 
+                            <!-- -->
+                            <strong>{{ _blog.name }}</strong> 
+                            <!-- -->
+                            {{ _blog.description }}
+                            <!-- --> <!-- -->
+                            <a href="https://twitter.com/kylemathews">You should follow them on Twitter</a>
+                        </p>
+                    </div>
+                </article>
+
+             </main>
+
+            {% include('_footer.twig') %}
+        </div>
+    </div>
+
+{{ _foot | raw }}
+
+
+</body>
+</html>

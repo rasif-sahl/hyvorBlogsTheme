@@ -1,6 +1,8 @@
 theme_name: NewTheme
 theme_version: 1.0
 
+lang: en
+
 colors:
   accent: "#896c6b"
   light:
