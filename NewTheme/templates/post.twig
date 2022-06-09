@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ {# <!DOCTYPE html>
 <html>
 <head>
 
@@ -11,9 +11,17 @@
     <div style="outline:none" tabindex="-1">
         <div class="global-wrapper" data-is-root-path="true">
 
-            {# <div class="header-wrapper">
-                {% include('_header.twig') %}
-            </div> #}
+            <header class="global-header">
+                <a class="header-link-home" href="/">
+                   {{ _blog.name }}
+                </a>
+            </header> #}
+
+
+{% extends '@base.twig' %}
+
+{% block body %}
+
             <header class="global-header">
                 <a class="header-link-home" href="/">
                    {{ _blog.name }}
@@ -44,7 +52,9 @@
 
              </main>
 
-            {% include('_footer.twig') %}
+{% endblock %}
+
+            {# {% include('_footer.twig') %}
         </div>
     </div>
 
@@ -52,4 +62,4 @@
 
 
 </body>
-</html>
+</html> #}
