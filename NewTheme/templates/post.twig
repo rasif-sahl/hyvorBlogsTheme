@@ -9,14 +9,7 @@
 <body>
 
     <div style="outline:none" tabindex="-1">
-        <div class="global-wrapper" data-is-root-path="true">
-
-            <header class="global-header">
-                <a class="header-link-home" href="/">
-                   {{ _blog.name }}
-                </a>
-            </header> #}
-
+        <div class="global-wrapper" data-is-root-path="true"> #}
 
 {% extends '@base.twig' %}
 
@@ -34,6 +27,20 @@
                         <h1 itemprop="headline">{{ _post.title }}</h1>
                         <p>{{ post.published_at | date('F j, Y') }}</p>
                     </header>
+
+                    <div class="translations">
+                        <p style="font-size: 0.9em; border: 1px solid var(--hr); border-radius: 0.75em; padding: 0.75em; background: var(--inlineCode-bg); word-break: keep-all; font-family: system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;">
+                            <span>
+                                <span>Translated by readers into: </span>
+                                <a href="/es/before-you-memo/">Español</a> 
+                                • <a href="/pt-br/before-you-memo/">Português do Brasil</a> 
+                                • <a href="/zh-hans/before-you-memo/">简体中文</a> 
+                                • <a href="/zh-hant/before-you-memo/">繁體中文</a> 
+                                • <a href="/ko/before-you-memo/">한국어</a>
+                            </span>
+                        </p>
+                    </div>
+
                     <section itemprop="articleBody">
                         {{ _post.content | raw }}
                     </section>

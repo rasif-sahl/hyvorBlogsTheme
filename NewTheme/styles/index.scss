@@ -1,8 +1,5 @@
-@import 'header.scss';
 @import 'footer.scss';
 @import 'post.scss';
-
-/* CSS Custom Properties Definitions */
 
 :root {
     // Not used part one
@@ -247,6 +244,16 @@ a:focus {
   margin-bottom: var(--spacing-20);
 }
 
+.header-wrapper {
+  .global-header {
+      margin-bottom: 20px;
+  }
+  .main-heading {
+      font-size: 2.986rem;
+      margin: 0;
+  }
+}
+
 .post-list-item {
   margin-bottom: var(--spacing-8);
   margin-top: var(--spacing-8);
@@ -266,11 +273,6 @@ a:focus {
 .post-list-item header {
   margin-bottom: var(--spacing-4);
 }
-
-// Finished in 278 only the bio part is remaining
-
-
-
 
 .header-link-home {
   font-weight: var(--fontWeight-bold);
@@ -295,9 +297,6 @@ a:focus {
 //   border-radius: 100%;
 // }
 
-
-
-
 .blog-post header h1 {
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
 }
@@ -310,14 +309,6 @@ a:focus {
 .blog-post-nav ul {
   margin: var(--spacing-0);
 }
-
-.gatsby-highlight {
-  margin-bottom: var(--spacing-8);
-}
-
-
-
-
 
 @media (max-width: 42rem) {
   blockquote {
