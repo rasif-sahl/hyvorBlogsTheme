@@ -10,9 +10,10 @@
             --color-heading: {{ _config.colors.heading }};
             --heading-black: {{ _config.colors.heading_black }};
             --color-accent: {{ _config.colors.accent }};
+            --color-background: {{ _config.colors.background }};
 
             /* Must think wheather we need this section to be edited or not */
-            --spacing-0: {{ _config.spacing.spacing_0 }};
+            /* --spacing-0: {{ _config.spacing.spacing_0 }};
             --spacing-1: {{ _config.spacing.spacing_1 }};
             --spacing-2: {{ _config.spacing.spacing_2 }};
             --spacing-3: {{ _config.spacing.spacing_3 }};
@@ -25,41 +26,37 @@
             --spacing-16: {{ _config.spacing.spacing_16 }};
             --spacing-20: {{ _config.spacing.spacing_20 }};
             --spacing-24: {{ _config.spacing.spacing_24 }};
-            --spacing-32: {{ _config.spacing.spacing_32 }};
+            --spacing-32: {{ _config.spacing.spacing_32 }}; */
 
             --fontWeight-bold: {{ _config.font.fontWeight_bold }};
             --fontWeight-black: {{ _config.font.fontWeight_black }};
             --fontSize-root: {{ _config.font.fontSize_root }};
 
-            --fontSize-1: {{ _config.font.fontSize_1 }};
+            /* --fontSize-1: {{ _config.font.fontSize_1 }};
             --fontSize-2: {{ _config.font.fontSize_2 }};
             --fontSize-3: {{ _config.font.fontSize_3 }};
             --fontSize-4: {{ _config.font.fontSize_4 }};
             --fontSize-5: {{ _config.font.fontSize_5 }};
-            --fontSize-6: {{ _config.font.fontSize_6 }};
+            --fontSize-6: {{ _config.font.fontSize_6 }}; */
         }
-        /* .mode-light:root {
-            --color-background-body: {{ _config.colors.light.background_body }};
-            --color-background-box: {{ _config.colors.light.background_box }};
-            --color-background-contrast: {{ _config.colors.light.background_contrast }};
-            --color-text-content: {{ _config.colors.light.text_content }};
-            --color-text-content-secondary: {{ _config.colors.light.text_content_secondary }};
-            --color-tag-bg: {{ _config.colors.light.tag.bg }};
-            --color-tag-fg: {{ _config.colors.light.tag.fg }};
-            --inline-code-bg: #EAEAEA;
-            --inline-code-color: #EB5757;
+        .mode-light:root {
+            --color-primary: {{ _config.colors.light.primary }};
+            --color-text: {{ _config.colors.light.text }};
+            --color-text-light: {{ _config.colors.light.text_light }};
+            --color-heading: {{ _config.colors.light.heading }};
+            --heading-black: {{ _config.colors.light.heading_black }};
+            --color-accent: {{ _config.colors.light.accent }};
+            --color-background: {{ _config.colors.light.background }};
         }
         .mode-dark:root {
-            --color-background-body: {{ _config.colors.dark.background_body }};
-            --color-background-box: {{ _config.colors.dark.background_box }};
-            --color-background-contrast: {{ _config.colors.dark.background_contrast }};
-            --color-text-content: {{ _config.colors.dark.text_content }};
-            --color-text-content-secondary: {{ _config.colors.dark.text_content_secondary }};
-            --color-tag-bg: {{ _config.colors.dark.tag.bg }};
-            --color-tag-fg: {{ _config.colors.dark.tag.fg }};
-            --inline-code-bg: #454545;
-            --inline-code-color: #ABABAB;
-        } */
+            --color-primary: {{ _config.colors.dark.primary }};
+            --color-text: {{ _config.colors.dark.text }};
+            --color-text-light: {{ _config.colors.dark.text_light }};
+            --color-heading: {{ _config.colors.dark.heading }};
+            --heading-black: {{ _config.colors.dark.heading_black }};
+            --color-accent: {{ _config.colors.dark.accent }};
+            --color-background: {{ _config.colors.dark.background }};
+        }
     </style>
 
         {{ _head | template }}
@@ -71,9 +68,16 @@
             development docs - http://blogs.hyvor.test/docs/themes-styles 
             domain - http://dev.hyvorblogs.test/
             gatsby github - https://github.com/gatsbyjs/gatsby-starter-blog/blob/master/src/style.css
+            overreacted - https://overreacted.io/
         #}
         <div style="outline:none" tabindex="-1">
             <div class="global-wrapper" data-is-root-path="true">
+
+            {# <div class="mode-toggler">
+                <button class="toggle-dark" onclick="_hb.changeColorMode('dark')">DARK </button>
+                <button class="toggle-light" onclick="_hb.changeColorMode('light')">LIGHT</button>
+            </div> #}
+
                 <div></div>
                 {% block body %}{% endblock %}
                 <div class="footer-wrapper">
