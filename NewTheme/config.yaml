@@ -24,7 +24,7 @@ colors:
     heading: "#fff"
     heading_black: "#fff"
     accent: "#fff"
-    background: "#000"
+    background: "#282C35"
 
 # spacing:
 #   spacing_0: "0"
